@@ -1,7 +1,12 @@
-from heapq import heappush
+from heapq import heappush, heappop
+def heap_sort(nums):
+  heap = []
+  for num in nums:
+    heappush(heap, num)
 
-heappush(heap, 4)
-heappush(heap, 1)
-heappush(heap, 7)
-heappush(heap, 3)
-print(heap)
+  sorted_nums = []
+  while heap:
+    sorted_nums.append(heappop(heap))
+  return sorted_nums
+
+print(heap_sort([5, 2, 9, 4, 8, 5]))
