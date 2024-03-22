@@ -1,0 +1,11 @@
+def selection_sort(a):
+    n = len(a)
+    for i in range(0, n-1):   
+        for j in range(i+1, n):
+            if a[i] > a[j]:
+                a[i], a[j] = a[j], a[i]
+
+
+d = [3, 7, 9, 4, 2, 8, 1, 5]
+selection_sort(d)
+print(d)
